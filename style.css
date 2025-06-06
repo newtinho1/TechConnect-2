@@ -1,0 +1,361 @@
+/* Definição de variáveis de cor para os temas claro e escuro */
+:root {
+  --background-primary: #f8f9fa;
+  --background-secondary: #ffffff;
+  --text-primary: #333;
+  --text-secondary: #ccc;
+  --header-gradient: linear-gradient(90deg, #007CF0, #00DFD8);
+  --accent-color: #007CF0;
+  --accent-hover: #005fa3;
+  --shadow-color: rgba(0,0,0,0.08); /* Sombra mais suave */
+  --blockquote-bg: #f1f1f1;
+  --nav-bg: #222;
+  --nav-hover: #444;
+  --border-color: #e0e0e0;
+}
+
+body.dark-mode {
+  --background-primary: #121212;
+  --background-secondary: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --header-gradient: linear-gradient(90deg, #005fa3, #008f8a);
+  --accent-color: #009eff;
+  --accent-hover: #007CF0;
+  --shadow-color: rgba(0,0,0,0.25); /* Sombra mais visível no modo escuro */
+  --blockquote-bg: #2a2a2a;
+  --nav-bg: #181818;
+  --nav-hover: #333;
+  --border-color: #444;
+}
+
+/* Animação de entrada para os cards */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  line-height: 1.7; /* Aumenta o espaçamento entre linhas */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* Cabeçalho */
+header {
+  background: var(--header-gradient);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+/* Botão de Modo Escuro */
+.dark-mode-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.dark-mode-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+/* Menu de navegação */
+nav {
+  background-color: var(--nav-bg);
+  padding: 0.8rem;
+  transition: background-color 0.3s;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--nav-hover);
+}
+
+/* Estrutura principal */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 3rem; /* Mais espaçamento */
+  background-color: var(--background-secondary);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Seção de Palestrantes (Cards) */
+.speakers-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Alinha a altura */
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.speaker-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  flex-basis: 300px;
+  flex-grow: 1;
+  max-width: 350px;
+  border-top: 4px solid var(--accent-color);
+  opacity: 0;
+  animation: fadeInSlideUp 0.5s ease-out forwards;
+}
+
+.speaker-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.speaker-card img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid var(--accent-color);
+}
+
+.speaker-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Formulário */
+form input, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  border-radius: 5px;
+}
+
+form label {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 600;
+}
+
+/* Botão estilizado */
+.botao-estilizado, button[type="submit"] {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.botao-estilizado:hover, button[type="submit"]:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+/* Galeria */
+.galeria {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.item-galeria {
+  text-align: center;
+  max-width: 300px;
+}
+
+.item-galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Depoimentos */
+blockquote {
+  background: var(--blockquote-bg);
+  padding: 1.5rem;
+  border-left: 5px solid var(--accent-color);
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  font-style: italic;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Patrocinadores */
+.patrocinadores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.patrocinadores img {
+  max-width: 120px;
+  filter: grayscale(1);
+  opacity: 0.7;
+  transition: filter 0.3s, opacity 0.3s;
+}
+
+.patrocinadores img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Cards de Destaque */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 200px;
+  background-color: var(--background-secondary);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  border-top: 4px solid var(--accent-color);
+  opacity: 0;
+  animation: fadeInSlideUp 0.5s ease-out forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+.card i {
+  color: var(--accent-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Seção de Contato */
+#contato i {
+  margin-right: 0.5rem;
+  color: var(--accent-color);
+}
+
+#contato a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#contato a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--nav-bg);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  .galeria, .patrocinadores, .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
