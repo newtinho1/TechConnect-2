@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,22 +8,17 @@
   <title>TechConnect 2025</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap"
-    rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <header>
     <img src="imagens/tec.png" alt="Logo Tec" width="300x160">
     <h1>TechConnect 2025</h1>
     <p><strong></strong> Conectando ideias, criando o futuro</p>
-
     <button id="dark-mode-toggle" class="dark-mode-button" title="Alternar modo escuro/claro">
       <i class="fas fa-moon"></i> / <i class="fas fa-sun"></i>
     </button>
@@ -44,11 +40,7 @@
   <main>
     <section id="sobre">
       <h2>Sobre o Evento</h2>
-      <p>O TechConnect 2025 é um dos principais eventos voltados para tecnologia, inovação e desenvolvimento profissional da atualidade. Reunindo entusiastas, especialistas, empreendedores e empresas do setor, o evento cria um espaço vibrante para a troca de ideias, conexão entre talentos e exploração das tendências que estão moldando o futuro.
-
-Ao longo de sua programação, os participantes terão acesso a palestras inspiradoras, painéis com líderes da indústria, workshops práticos e oportunidades de networking com pessoas que estão transformando o mercado. É o ambiente ideal para quem busca se atualizar, fazer novas parcerias e impulsionar projetos inovadores.
-
-Seja você um estudante, profissional da área, investidor ou apenas um curioso apaixonado por tecnologia, o TechConnect 2025 é o lugar certo para aprender, colaborar e crescer.</p>
+      <p>O TechConnect 2025 é um evento voltado para quem gosta de tecnologia, com foco em inovação, troca de ideias e aprendizado.</p>
     </section>
 
     <section id="palestrantes">
@@ -57,14 +49,12 @@ Seja você um estudante, profissional da área, investidor ou apenas um curioso 
         <div class="speaker-card">
           <img src="imagens/newton.jpg" alt="Logo Itaú" width="600"> 
           <h3>Dr. Paulo Vitor</h3>
-          <p>Pioneiro em computação quântica e visionária da tecnologia. Palestra: "O Futuro da Inteligência Artificial
-            Generativa".</p>
+          <p>Pioneiro em computação quântica e visionária da tecnologia. Palestra: "O Futuro da Inteligência Artificial Generativa".</p>
         </div>
         <div class="speaker-card">
           <img src="imagens/newton.jpg" alt="Logo Itaú" width="600"> 
           <h3>Dr. Newton Chagas</h3>
-          <p>Especialista em cibersegurança e criptografia. Palestra: "Blockchain e a Segurança de Dados na Nova Era
-            Digital".</p>
+          <p>Especialista em cibersegurança e criptografia. Palestra: "Blockchain e a Segurança de Dados na Nova Era Digital".</p>
         </div>
       </div>
     </section>
@@ -72,44 +62,37 @@ Seja você um estudante, profissional da área, investidor ou apenas um curioso 
     <section id="inscricoes">
       <h2>Inscrições</h2>
       <a class="botao-estilizado" href="#">Clique aqui para se inscrever</a>
-      <form action="#" method="post">
+      <form id="form-inscricao">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required=""><br>
+        <input type="text" id="nome" name="nome" required><br>
+
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required=""><br>
+        <input type="email" id="email" name="email" required><br>
+
         <button type="submit">Enviar</button>
+        <p id="mensagem-obrigado" style="display:none; color: green; font-weight: bold; margin-top: 10px;">
+          Obrigado pela inscrição!
+        </p>
       </form>
     </section>
 
-   <section id="galeria">
-  <h2>Galeria de Edições Atuais e Anteriores</h2>
-  <div class="galeria">
-    <div class="item-galeria">
-      <img src="imagens/conversa.png" alt="Conversa" width="150x80">
-      <p>Participantes interagindo durante uma sessão de networking.</p>
-    </div>
-    <div class="item-galeria">
-      <img src="imagens/palestra.png" alt="Palestras" width="150x80">
-      <p>Palestra sobre inovação tecnológica em ambiente imersivo.</p>
+    <section id="galeria">
+      <h2>Galeria de Edições Anteriores</h2>
+      <div class="galeria">
+        <div class="item-galeria">
+          <img src="imagens/conversa.png" alt="Conversa" width="150x80">
+          <p>Participantes interagindo durante uma sessão de networking.</p>
+        </div>
+        <div class="item-galeria">
+          <img src="imagens/palestra.png" alt="Ambiente Tech" width="150x80">
+          <p>Palestra sobre inovação tecnológica em ambiente imersivo.</p>
+        </div>
+        <div class="item-galeria">
+          <img src="imagens/2024.png" alt="Edição 2024" width="150x80">
+          <p>Registro da edição TechConnect 2024 com destaque para a diversidade.</p>
+        </div>
       </div>
-      <div class="item-galeria">
-      <img src="imagens/conversas.jpg" alt="Palestrantes e Estudantes" width="150x80">
-      <p>Palestrantes e Estudantes conversando após palestra.</p>
-      </div>
-      <div class="item-galeria">
-      <img src="imagens/certificados.jpg" alt="Ambiente Tech" width="150x80">
-      <p>Estudantes com seus devidos certificados.</p>
-      </div>
-      <div class="item-galeria">
-      <img src="imagens/tema.png" alt="Ambiente Tech" width="150x80">
-      <p>Tema do Evento 2025.</p>
-    </div>
-    <div class="item-galeria">
-      <img src="imagens/2024.png" alt="Edição 2024" width="150x80">
-      <p>Registro da edição TechConnect 2024 com destaque para a diversidade.</p>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section id="depoimentos">
       <h2>Depoimentos</h2>
@@ -129,7 +112,6 @@ Seja você um estudante, profissional da área, investidor ou apenas um curioso 
         <img src="imagens/star.png" alt="Logo Itaú" width="600">
       </div>
     </section>
-
 
     <section id="destaques">
       <h2>O que você encontrará no evento</h2>
@@ -151,10 +133,15 @@ Seja você um estudante, profissional da área, investidor ou apenas um curioso 
 
     <section id="contato">
       <h2>Contato</h2>
-      <p><i class="fas fa-envelope"></i> Email: <a
-          href="mailto:contato@techconnect2025.com">contato@techconnect2025.com</a></p>
-      <p><i class="fab fa-instagram"></i> Instagram: <a href="#">@techconnect2025</a></p>
-      <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="#">linkedin.com/techconnect2025</a></p>
+      <p><i class="fas fa-envelope"></i> Email: 
+        <a href="https://www.microsoft.com/pt-br/">contato@techconnect2025.com</a>
+      </p>
+      <p><i class="fab fa-instagram"></i> Instagram: 
+        <a href="https://www.instagram.com" target="_blank">@techconnect2025</a>
+      </p>
+      <p><i class="fab fa-linkedin"></i> LinkedIn: 
+        <a href="https://www.linkedin.com" target="_blank">linkedin.com/techconnect2025</a>
+      </p>
     </section>
   </main>
 
@@ -171,6 +158,16 @@ Seja você um estudante, profissional da área, investidor ou apenas um curioso 
     darkModeToggle.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
     });
+
+    const form = document.getElementById('form-inscricao');
+    const mensagem = document.getElementById('mensagem-obrigado');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      form.reset();
+      mensagem.style.display = 'block';
+      setTimeout(() => mensagem.style.display = 'none', 5000);
+    });
   </script>
-  </body>
+</body>
 </html>
